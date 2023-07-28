@@ -24,4 +24,4 @@ To run the Generic Service, you will need the following:
 
 ## License
 
-This Generic Service is distributed under the [Apache License](LICENSE) and is provided "as-is" without warranty or guarantees. You are free to modify and use the service as per the terms of the license.
+This Generic Service is distributed under the [Apache 2.0 License](LICENSE) and is provided "as-is" without warranty or guarantees. You are free to modify and use the service as per the terms of the license.
