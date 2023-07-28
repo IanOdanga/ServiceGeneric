@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/Mambu" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Mambu" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Mambu" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="RunMambuAPI">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="docNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="debAmount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="postingDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="transactionId" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="accNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="descriptionGJ" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="typetext" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="intEntry" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="entNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="gLcode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RunMambuAPI_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="RunMambuAPI">
+    <part name="parameters" element="tns:RunMambuAPI" />
+  </message>
+  <message name="RunMambuAPI_Result">
+    <part name="parameters" element="tns:RunMambuAPI_Result" />
+  </message>
+  <portType name="Mambu_Port">
+    <operation name="RunMambuAPI">
+      <input name="RunMambuAPI" message="tns:RunMambuAPI" />
+      <output name="RunMambuAPI_Result" message="tns:RunMambuAPI_Result" />
+    </operation>
+  </portType>
+  <binding name="Mambu_Binding" type="tns:Mambu_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="RunMambuAPI">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Mambu:RunMambuAPI" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="RunMambuAPI">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="RunMambuAPI_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Mambu">
+    <port name="Mambu_Port" binding="tns:Mambu_Binding">
+      <address location="http://40.85.80.247:6027/Y9/WS/Y9%20Microfinance/Codeunit/Mambu" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

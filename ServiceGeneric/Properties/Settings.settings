@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ServiceGeneric.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Uname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dynamicsUser</Value>
+    </Setting>
+    <Setting Name="pass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Y9Tanzan!4#22</Value>
+    </Setting>
+    <Setting Name="filepath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\DotNET Dev\Services\GL Posting Automation\ServiceGeneric\response.json</Value>
+    </Setting>
+    <Setting Name="Navuser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">cybercill</Value>
+    </Setting>
+    <Setting Name="Navpass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">P@$$w0rd</Value>
+    </Setting>
+    <Setting Name="ServiceGeneric_NAVWEBREF_Mambu" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://40.85.80.247:6027/Y9/WS/Y9%20Microfinance/Codeunit/Mambu</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
