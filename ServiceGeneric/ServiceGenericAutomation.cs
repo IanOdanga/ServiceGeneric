@@ -26,12 +26,12 @@ namespace ServiceGeneric
         protected override void OnStart(string[] args)
         {
             ///*live version*/
-            /*_timer = new System.Timers.Timer();
+           /* _timer = new System.Timers.Timer();
             _timer.AutoReset = true;
-            _timer.Enabled = true;
-            Console.WriteLine("===> Generic Automation Service started ... ");*/
+            _timer.Enabled = true;*/
+            Console.WriteLine("===> Generic Automation Service started ... ");
             ///*live version*/
-            
+
             /*debug mode*/
             while (true)
             {
@@ -88,6 +88,7 @@ namespace ServiceGeneric
             if (t == DateTime.Now)
             {
                 ProcessInvoke.ExecuteFunction();
+                Thread.Sleep(1000);
             }
             else
             {

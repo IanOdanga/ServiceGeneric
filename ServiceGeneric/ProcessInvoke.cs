@@ -51,7 +51,8 @@ namespace ServiceGeneric
 
             DateTime date = DateTime.Now;
             var dateTo = new DateTime(date.Year, date.Month, date.Day);
-            var dateFrom = dateTo.AddDays(-1);
+            var dateFrom = dateTo.AddHours(-24);
+            dateTo = dateFrom.AddHours(23).AddMinutes(59).AddSeconds(59);
 
             for (int offset = 0; offset < 50000; offset += 1000)
             {
