@@ -49,18 +49,6 @@ namespace ServiceGeneric.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\DotNET Dev\\Services\\GL Posting Automation\\ServiceGeneric\\response.json")]
-        public string filepath {
-            get {
-                return ((string)(this["filepath"]));
-            }
-            set {
-                this["filepath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("cybercill")]
         public string Navuser {
             get {

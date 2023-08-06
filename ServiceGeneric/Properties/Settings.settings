@@ -8,9 +8,6 @@
     <Setting Name="pass" Type="System.String" Scope="User">
       <Value Profile="(Default)">Y9Tanzan!4#22</Value>
     </Setting>
-    <Setting Name="filepath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">D:\DotNET Dev\Services\GL Posting Automation\ServiceGeneric\response.json</Value>
-    </Setting>
     <Setting Name="Navuser" Type="System.String" Scope="User">
       <Value Profile="(Default)">cybercill</Value>
     </Setting>

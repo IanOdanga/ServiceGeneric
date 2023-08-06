@@ -26,28 +26,28 @@ namespace ServiceGeneric
         protected override void OnStart(string[] args)
         {
             ///*live version*/
-           /* _timer = new System.Timers.Timer();
+            _timer = new System.Timers.Timer();
             _timer.AutoReset = true;
-            _timer.Enabled = true;*/
+            _timer.Enabled = true;
             Console.WriteLine("===> Generic Automation Service started ... ");
             ///*live version*/
 
             /*debug mode*/
-            while (true)
-            {
-                try
-                {
-                    ProcessInvoke.ExecuteFunction();
-                }
-                catch (Exception ee)
-                {
-                    ee.Data.Clear();
-                }
-                finally
-                {
-                    Thread.Sleep(1500);
-                }
-            }
+            //while (true)
+            //{
+            //    try
+            //    {
+            //        ProcessInvoke.ExecuteFunction();
+            //    }
+            //    catch (Exception ee)
+            //    {
+            //        ee.Data.Clear();
+            //    }
+            //    finally
+            //    {
+            //        Thread.Sleep(1500);
+            //    }
+            //}
             /*debug mode*/
             try
             {
@@ -81,11 +81,9 @@ namespace ServiceGeneric
         }
         private void ServiceTimer_Tick(object sender, ElapsedEventArgs e)
         {
-            //SetTimer();
             timeString = ConfigurationManager.AppSettings["StartTime"];
             DateTime t = DateTime.Parse(timeString);
-
-            if (t == DateTime.Now)
+            if (t > DateTime.Now)
             {
                 ProcessInvoke.ExecuteFunction();
                 Thread.Sleep(1000);
@@ -93,7 +91,7 @@ namespace ServiceGeneric
             else
             {
                 Console.WriteLine("===> Task time not yet reached, Service paused ... ");
-                Thread.Sleep(100000);
+                Thread.Sleep(1000);
             }
 
             _timer.Stop();
@@ -136,10 +134,10 @@ namespace ServiceGeneric
             DateTime t = DateTime.Parse(timeString);
             TimeSpan ts = new TimeSpan();
             int x;
-            ts = t - System.DateTime.Now;
+            ts = t - DateTime.Now;
             if (ts.TotalMilliseconds < 0)
             {
-                ts = t.AddDays(1) - System.DateTime.Now;//Here you can increase the timer interval based on your requirments.   
+                ts = t.AddDays(1) - DateTime.Now;//Here you can increase the timer interval based on your requirments.   
             }
             return ts.TotalMilliseconds;
         }

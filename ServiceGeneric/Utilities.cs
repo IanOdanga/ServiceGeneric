@@ -11,7 +11,7 @@ namespace ServiceGeneric
     internal class UTILITIES
     {
         private static Collection<string> logs = new Collection<string>();
-        public static string logpath = "C:\\LOGS\\Agency Logs\\AgencyService_logs";
+        public static string logpath = "C:\\LOGS\\Mambu Service Logs\\MambuService_logs";
 
         public static string LogFileName
         {

@@ -62,7 +62,7 @@ namespace ServiceGeneric
             public int entryID { get; set; }
             public DateTime creationDate { get; set; }
             public DateTime entryDate { get; set; }
-            public DateTime bookingDate { get; set; }
+            public string bookingDate { get; set; }
             public string transactionID { get; set; }
             public string accountKey { get; set; }
             public string productKey { get; set; }
